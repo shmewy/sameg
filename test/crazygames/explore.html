@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Cards</title>
+    <link rel="stylesheet" href="f73ec7bba46bbbcc.css">
+</head>
+
+<body>
+    <div id="carouselContainer" class="css-1jzmwuf">
+        <!-- Carousels will be generated here -->
+    </div>
+    <script>
+        async function fetchGamesData() {
+            try {
+                const response = await fetch('games.json');
+                if (!response.ok) {
+                    throw new Error(`Failed to load JSON: ${response.status}`);
+                }
+                const data = await response.json();
+                console.log('Fetched games data:', data); // Log the fetched data
+                return data;
+            } catch (error) {
+                console.error('Error fetching game data:', error);
+                return [];
+            }
+        }
+
+        function createGameCard(game, isFirstCard) {
+            const link = document.createElement('a');
+            link.className = isFirstCard ? 'css-h13zhk largeCard' : 'css-h13zhk'; // Apply `largeCard` only to the first card
+            link.href = game.url;
+
+            const titleDiv = document.createElement('div');
+            titleDiv.className = 'gameThumbTitleContainer';
+            titleDiv.textContent = game.name;
+
+            const img = document.createElement('img');
+            img.className = 'GameThumbImage';
+            const fullImageUrl = `https://d3rtzzzsiu7gdr.cloudfront.net${game.imageSrc}`;
+            img.src = fullImageUrl;
+            img.alt = game.name;
+
+            link.appendChild(titleDiv);
+            link.appendChild(img);
+            return link;
+        }
+
+
+
+        function createCarousel(tag, games) {
+            const carouselDiv = document.createElement('div');
+            carouselDiv.className = 'prime-carousel css-1nehx92';
+
+            const title = document.createElement('h2');
+            title.textContent = `Category: ${tag}`;
+            carouselDiv.appendChild(title);
+
+            const ul = document.createElement('ul');
+            ul.className = 'prime-carousel-container css-1wx3xhk';
+
+            games.forEach((game, index) => {
+                const li = document.createElement('li');
+                li.className = 'primeCarouselLi';
+                // Pass `true` to `isFirstCard` if it's the first card (index 0)
+                li.appendChild(createGameCard(game, index === 0));
+                ul.appendChild(li);
+            });
+
+
+            carouselDiv.appendChild(ul);
+
+            const leftArrow = document.createElement('button');
+            leftArrow.className = 'arrow css-1pzb6vf';
+            leftArrow.textContent = '←';
+            const rightArrow = document.createElement('button');
+            rightArrow.className = 'arrow css-1pzb6vf';
+            rightArrow.textContent = '→';
+
+            carouselDiv.appendChild(leftArrow);
+            carouselDiv.appendChild(rightArrow);
+
+            return carouselDiv;
+        }
+
+        async function generateCarousels() {
+            const carouselContainer = document.getElementById('carouselContainer');
+            const gamesData = await fetchGamesData();
+
+            if (gamesData.length === 0) {
+                console.warn('No game data available to display');
+                return;
+            }
+
+            console.log(gamesData);
+
+
+
+            const categorizedGames = {};
+
+            gamesData.forEach(game => {
+                const tags = game.tags.split(',').map(tag => tag.trim());
+                tags.forEach(tag => {
+                    if (!categorizedGames[tag]) {
+                        categorizedGames[tag] = [];
+                    }
+                    categorizedGames[tag].push(game);
+                });
+            });
+
+
+            Object.keys(categorizedGames).forEach(tag => {
+                const carousel = createCarousel(tag, categorizedGames[tag]);
+                console.log(`Creating carousel for tag: ${tag} with ${categorizedGames[tag].length} games`);
+                carouselContainer.appendChild(carousel);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', generateCarousels);
+    </script>
+</body>
+
+</html>

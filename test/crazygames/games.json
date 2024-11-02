@@ -1,0 +1,63 @@
+[
+	{
+		"url": "/files/ace-attorney/index.html",
+		"imageSrc": "/files/ace-attorney/splash.png",
+		"name": "Ace Attorney",
+		"tags": "gba, capcom"
+	},
+	{
+		"url": "/files/pokemon-emerald/index.html",
+		"imageSrc": "/files/pokemon-emerald/splash.webp",
+		"name": "Pokemon - Emerald",
+		"tags": "gba, retro"
+	},
+	{
+		"url": "/files/ac-nds/index.html",
+		"imageSrc": "/files/ac-nds/splash.webp",
+		"name": "Animal Crossing - Wild World",
+		"tags": "nds, retro"
+	},
+	{
+		"url": "/files/mkart-gba/index.html",
+		"imageSrc": "/files/mkart-gba/splash.webp",
+		"name": "Mario Kart Super Circuit",
+		"tags": "gba, retro"
+	},
+	{
+		"url": "/files/gta-gba/index.html",
+		"imageSrc": "/files/gta-gba/splash.webp",
+		"name": "GTA",
+		"tags": "gba, retro"
+	},
+	{
+		"url": "/files/pokemon-uv/index.html",
+		"imageSrc": "/files/pokemon-uv/splash.webp",
+		"name": "Pokemon - Ultra Violet",
+		"tags": "gba, retro"
+	},
+	{
+		"url": "/files/supermario-gba/index.html",
+		"imageSrc": "/files/supermario-gba/splash.webp",
+		"name": "Super Mario Advance 4 - Super Mario Bros. 3 (V1.1)",
+		"tags": "gba, retro, mario"
+	},
+
+	{
+		"url": "/files/pokemon-ruby/index.html",
+		"imageSrc": "/files/pokemon-ruby/splash.webp",
+		"name": "Pokemon - Ruby",
+		"tags": "gba, retro"
+	},
+	{
+		"url": "/files/pokemon-firered/index.html",
+		"imageSrc": "/files/pokemon-firered/splash.webp",
+		"name": "Pokemon - Fire Red",
+		"tags": "gba, retro"
+	},
+	{
+		"url": "/files/alleyway-gb/index.html",
+		"imageSrc": "/files/alleyway-gb/splash.webp",
+		"name": "Alleyway",
+		"tags": "gb, retro"
+	}
+]
