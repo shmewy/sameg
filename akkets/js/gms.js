@@ -48,13 +48,7 @@ fetch("/index.json")
 // ________________________________________________________________
 
 let startIndex = 0;
-var cardsPerLoad = 20;
-if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
-	// alert("It's a local server!");
-	var cardsPerLoad = 20000000;
-} else {
-	var cardsPerLoad = 20;
-}
+const cardsPerLoad = 20000000;
 let isLoading = false;
 
 function displayCards(data, reset = false) {
