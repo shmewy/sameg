@@ -1,4 +1,9 @@
 [
+	{
+		"url": "/files/run3/index.html",
+		"imageSrc": "/files/run3/favicon.png",
+		"name": "Run 3"
+	},
     {
 		"url": "/files/slope/game.html",
 		"imageSrc": "/files/slope/splash.png",
