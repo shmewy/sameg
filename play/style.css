@@ -77,3 +77,46 @@ body {
     color: #525252 !important;
     border: 0 !important;
 }
+
+.bottom-bar-center {
+    flex-grow: 1; /* Allows the center div to take up space */
+}
+
+#hide-bar-btn{
+    background-color: transparent;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 10px;
+}
+
+#exit-fullscreen-btn{
+    background-color: transparent;
+    color: #fff;
+    border: 0;
+    font-size: 17px;
+}
+
+.game-bar-name{
+    font-size: 23px;
+    font-weight:500;
+}
+
+#bottom-bar {
+    /* position: absolute; */
+    background-color: #001377;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure it sits above other content */
+}
+
+.game-iframe {
+    width: 100%;
+    height: calc(100vh - 50px); /* Adjust height based on your design */
+}
+
+.bottom-bar-logo {
+    width: 20px; /* Logo size */
+    height: 20px; /* Logo size */
+}
+

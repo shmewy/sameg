@@ -153,7 +153,7 @@
                             left: 0;
                             right: 0;
                             height: 50px;
-                            background-color: #001377 !important;
+                            background-color: white;
                             z-index: 1000;
                         }
                         
@@ -175,7 +175,7 @@
                             left: 0;
                             right: 0;
                             height: 50px;
-                            background-color: #001377 !important;
+                            background-color: white;
                             z-index: 1000;
                         }
                         
@@ -196,7 +196,7 @@
                             left: 0;
                             right: 0;
                             height: 50px;
-                            background-color: #001377 !important;
+                            background-color: white;
                             z-index: 1000;
                         }
                     </style>
@@ -229,34 +229,6 @@
                             }
                         }
                     });
-
-                    function open_fullscreen() {
-                        const gameContainer = document.getElementById("game-player");
-                        
-                        if (!document.fullscreenElement) {
-                            // Enter fullscreen
-                            if (gameContainer.requestFullscreen) {
-                                gameContainer.requestFullscreen();
-                            } else if (gameContainer.webkitRequestFullscreen) {
-                                gameContainer.webkitRequestFullscreen();
-                            } else if (gameContainer.msRequestFullscreen) {
-                                gameContainer.msRequestFullscreen();
-                            } else if (gameContainer.mozRequestFullScreen) {
-                                gameContainer.mozRequestFullScreen();
-                            }
-                        } else {
-                            // Exit fullscreen
-                            if (document.exitFullscreen) {
-                                document.exitFullscreen();
-                            } else if (document.webkitExitFullscreen) {
-                                document.webkitExitFullscreen();
-                            } else if (document.msExitFullscreen) {
-                                document.msExitFullscreen();
-                            } else if (document.mozCancelFullScreen) {
-                                document.mozCancelFullScreen();
-                            }
-                        }
-                    }
                     </script>
                 </div><!-- end col-9 -->
 
