@@ -120,6 +120,11 @@
                     </div>
                     
                     <style>
+                        .hidden {
+    display: none !important; /* Ensure this rule takes precedence */
+}
+
+
                         #game-player {
                             position: relative;
                             width: 100%;
@@ -144,6 +149,9 @@
                             height: calc(100vh - 50px) !important;
                             width: 100%;
                             max-height: 100%;
+                        }
+                        #game-player:fullscreen iframe .calc-height {
+                            height: calc(100vh - 50px) !important;
                         }
                         
                         #game-player:fullscreen #bottom-bar {
@@ -257,6 +265,8 @@
                             }
                         }
                     }
+
+                    
                     </script>
                 </div><!-- end col-9 -->
 

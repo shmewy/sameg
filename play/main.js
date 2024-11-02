@@ -1,11 +1,12 @@
 function hideBottomBar() {
-	const bottomBar = document.getElementById("bottom-bar");
-	if (bottomBar.style.display === "none") {
-		bottomBar.style.display = "flex"; // Show the bar
-	} else {
-		bottomBar.style.display = "none"; // Hide the bar
-	}
+    const bottomBar = document.getElementById("bottom-bar");
+    if (bottomBar.style.display === "none") {
+        bottomBar.style.display = "flex"; // Show the bar
+    } else {
+        bottomBar.setAttribute("style", "display: none !important;"); // Hide the bar with !important
+    }
 }
+
 
 document.addEventListener("DOMContentLoaded", () => {
 	const queryString = decodeURIComponent(window.location.search.substring(1));
@@ -67,25 +68,24 @@ document.addEventListener("DOMContentLoaded", () => {
 					const loadGame = async (url) => {
 						// Load the game iframe
 						iframeContainer.innerHTML += `
-                        <iframe class="game-iframe" id="game-area" src="${url}" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen></iframe>
-<div id="bottom-bar" class="d-flex justify-content-between align-items-center p-2 text-white">
-    <div class="bottom-bar-left d-flex align-items-center">
-    
-        <span class="game-bar-name">${gameTitleElement.textContent}</span>
-    </div>
-    <div class="bottom-bar-center mx-auto text-center">
-        <button onclick="document.getElementById("bottom-bar").style.display = 'none';" id="hide-bar-btn" class="btn btn-light btn-sm">
-<i class=" fa-solid fa-eye-slash"></i>
-            Hide This Bar
-        </button>
-    </div>
-    <div class="bottom-bar-right">
-        <button onclick="document.exitFullscreen();" id="exit-fullscreen-btn" class="btn btn-light btn-sm">
-            <i class="fa-solid fa-compress"></i>
-        </button>
-    </div>
-</div>
-`;
+        <iframe class="game-iframe calc-height" id="game-area" src="${url}" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen></iframe>
+        <div id="bottom-bar" class="d-flex justify-content-between align-items-center p-2 text-white">
+            <div class="bottom-bar-left d-flex align-items-center">
+                <span class="game-bar-name">${gameTitleElement.textContent}</span>
+            </div>
+            <div class="bottom-bar-center mx-auto text-center">
+                <button onclick="document.getElementById('bottom-bar').classList.add('hidden');document.getElementById('calc-height').classlist.remove('calc-height');" id="hide-bar-btn" class="btn btn-light btn-sm">
+                    <i class="fa-solid fa-eye-slash"></i>
+                    Hide This Bar
+                </button>
+            </div>
+            <div class="bottom-bar-right">
+                <button onclick="document.exitFullscreen();" id="exit-fullscreen-btn" class="btn btn-light btn-sm">
+                    <i class="fa-solid fa-compress"></i>
+                </button>
+            </div>
+        </div>
+        `;
 					};
 
 					const tryUrls = async () => {
