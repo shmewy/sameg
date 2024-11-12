@@ -1,5 +1,15 @@
 [
 	{
+		"url": "/files/offBrandFortnite/index.html",
+		"imageSrc": "/files/offBrandFortnite/splash.png",
+		"name": "Off Brand Fortnite"
+	},
+	{
+		"url": "/files/racing-limits/index.html",
+		"imageSrc": "/files/racing-limits/splash.png",
+		"name": "Racing Limits"
+	},
+	{
 		"url": "/files/run3/index.html",
 		"imageSrc": "/files/run3/favicon.png",
 		"name": "Run 3"

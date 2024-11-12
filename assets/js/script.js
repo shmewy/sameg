@@ -237,3 +237,22 @@ function updateFaviconAndTitle(selectedOption) {
 
 // Run the function to create the dropdown
 createDropdown();
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+	// Check if the URL is not localhost or 127.0.0.1
+	const isLocalhost = ["localhost", "127.0.0.1"].includes(window.location.hostname);
+  
+	if (!isLocalhost) {
+	  // Create the script element
+	  const adsScript = document.createElement("script");
+	  adsScript.async = true;
+	  adsScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7128870281959256";
+	  adsScript.crossOrigin = "anonymous";
+  
+	  // Insert the script at the beginning of the head
+	  document.head.prepend(adsScript);
+	}
+  });
+  

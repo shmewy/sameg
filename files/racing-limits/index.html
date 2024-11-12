@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Racing Limits Game Files</title>
+<link rel="stylesheet" href="vs/gameloader2020.css" />
+<script src="vs/gameloader2020.js"></script>
+<script src="vs/cloak.js"></script>
+<meta name="robots" content="noindex,nofollow" />
+<script src="vs/gameloader-helper.js"></script>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<script type="text/javascript">
+  var options = {
+    author: "hypackel.github.io",
+    logo: "logo.png",
+    gameName: "Racing Limits",
+    gameNameEu: "Racing Limits",
+    gameUrl: "41246",
+    moreLink: ("https://hypackellite.github.io"),
+    allowFullscreen: true,
+    locale: "en_US",
+    loader: "unity2020",
+    loaderOptions: {
+      unityLoaderUrl: "Build/Racing Limits.loader.js",
+      unityConfigOptions: {
+        dataUrl: "Build/Racing Limits.data.gz",
+        frameworkUrl: "Build/Racing Limits.framework.js.gz?v=1",
+          codeUrl: "Build/Racing Limits.wasm.gz",
+        streamingAssetsUrl: "StreamingAssets"
+      }
+    },
+    };
+  GameInit.load(options);   
+</script>
+<style>
+    .jss31, .game-footer {
+  height: 0 !important;
+  overflow: hidden;
+}
+
+</style>
+<script>
+    function makeCanvasFullScreen() {
+  const canvases = document.querySelectorAll("canvas");
+
+  canvases.forEach((canvas) => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    canvas.style.width = "100vw";
+    canvas.style.height = "100vh";
+  });
+}
+
+// Run the function initially
+makeCanvasFullScreen();
+
+// Update the canvas size on window resize
+window.addEventListener("resize", makeCanvasFullScreen);
+window.addEventListener("load", makeCanvasFullScreen);
+
+</script>
+</body>
+</html>
