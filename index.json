@@ -1,5 +1,10 @@
 [
 	{
+		"url": "/files/super-star-car/index.html",
+		"imageSrc": "/files/super-star-car/splash.avif",
+		"name": "Super Star Car"
+	},
+	{
 		"url": "/files/offBrandFortnite/index.html",
 		"imageSrc": "/files/offBrandFortnite/splash.png",
 		"name": "Off Brand Fortnite"

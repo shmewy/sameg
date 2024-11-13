@@ -245,6 +245,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const isLocalhost = ["localhost", "127.0.0.1"].includes(window.location.hostname);
   
 	if (!isLocalhost) {
+		console.log("scrit injection complete");
 	  // Create the script element
 	  const adsScript = document.createElement("script");
 	  adsScript.async = true;
