@@ -64,10 +64,11 @@ function displayCards(data, reset = false) {
 	data.sort((a, b) => {
 		if (a.broken && !b.broken) {
 			return 1; // Move broken games to the bottom
-		} if (!a.broken && b.broken) {
+		}
+		if (!a.broken && b.broken) {
 			return -1; // Move non-broken games to the top
 		}
-			return 0; // Maintain the order for games with the same broken status
+		return 0; // Maintain the order for games with the same broken status
 	});
 
 	// Display cards based on startIndex and cardsPerLoad
@@ -307,8 +308,7 @@ document.addEventListener("DOMContentLoaded", () => {
 							const playItem = createGameItem(matchedGame);
 							playItem.addEventListener("click", () => {
 								logGameClick(matchedGame.name);
-								window.location.href =
-									`/play/index.html?${matchedGame.name}`;
+								window.location.href = `/play/index.html?${matchedGame.name}`;
 							});
 							gamesContainerSingleRow.appendChild(playItem);
 						}
@@ -326,7 +326,7 @@ document.addEventListener("DOMContentLoaded", () => {
 							arrayFromLocalStorage.length > 0
 						) {
 							const firstItem = arrayFromLocalStorage[0];
-							console.log("First item in the array:", firstItem);
+							// console.log("First item in the array:", firstItem);
 
 							// Fetch the games data and match the first item
 							fetch("/index.json")
@@ -338,15 +338,21 @@ document.addEventListener("DOMContentLoaded", () => {
 									);
 									if (matchedGame) {
 										// console.log('Matching game:', matchedGame);
-										console.log("Image Source:", matchedGame.imageSrc);
+										// console.log("Image Source:", matchedGame.imageSrc);
+										// Select the .full-image-container element
+										const imageContainer = document.querySelector(
+											".full-image-container",
+										);
+
+										imageContainer.style.backgroundImage = `url('${matchedGame.imageSrc}')`;
+
 										if (
 											localStorage.getItem("likesscreen") == null ||
 											localStorage.getItem("likesscreen") == "true"
 										) {
 											document.getElementById(
 												"particles-js",
-											).style.backgroundImage =
-												`url(${matchedGame.imageSrc})`;
+											).style.backgroundImage = `url(${matchedGame.imageSrc})`;
 											if (localStorage.getItem("likesscreen") == "true") {
 												// .style.backgroundColor = "rgba(0,0,0,0.8)";
 											}

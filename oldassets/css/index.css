@@ -75,13 +75,6 @@ a {
 .text-center {
   text-align: center;
 }
-#footer {
-  background-color: #1a1a1a;
-  height: 300px;
-  padding-left: 0px;
-  padding-bottom: 0px;
-  box-sizing: border-box;
-}
 #gs {
   cursor: pointer;
   background-color: #4CAF50;

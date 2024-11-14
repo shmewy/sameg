@@ -47,7 +47,6 @@
 
 <body>
 
-  </div>
   <div style="background-color: transparent !important;" id="fixed-nav-bar" class="fixed-nav-bar">
     <div class="fixed-nav-bar-container ">
       <a class="icon" style="word-wrap:initial" href="/">
@@ -57,6 +56,8 @@
     <div style="color: inherit;" class="fixed-nav-bar-right">
       <a class="navbar-link" href="/library.html">
         <i class="fa-solid fa-gamepad navbar-icon"></i>Games </a>
+        <a class="navbar-link" href="/settings.html">
+          <i class="fa-solid fa-gear settings-icon"></i>Settings </a>
     </div>
   </div>
   <header class="header">
@@ -80,21 +81,68 @@
       </div>
     </nav>
   </header>
+  <style>
+    /* Reset margin and padding for html and body */
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      /* Ensure the full viewport height is used */
+      /* overflow: hidden; Prevent scrolling */
+    }
+
+    /* Full Image Container */
+    .full-image-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      /* Full width of the viewport */
+      height: 80vh;
+      /* Full height of the viewport */
+      background: url('') center center/cover no-repeat;
+      z-index: -1;
+      /* Ensure it's behind other content */
+    }
+
+    /* Overlaying Fade Effect */
+    .full-image-container::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /* Cover the entire container */
+      background: linear-gradient(to bottom, rgba(28, 28, 28, 0) 0%, rgba(28, 28, 28, 1) 100%);
+      z-index: 1;
+      /* Place the fade effect over the image */
+    }
+
+
+    .slidereeddwefsa {
+      margin-top: 70vh;
+    }
+  </style>
 
   <main style="z-index: 3 !important;color: #fff; margin-top: 15vh;" class="manicontent">
 
+    <!-- Full-width Image Fade Effect -->
+    <div class="full-image-container">
+    </div>
 
     <center>
-      <div style="max-width: 80vw;" class="slidereeddwefsa">
+      <div style="max-width: 90vw;" class="slidereeddwefsa">
 
         <!-- Second Row for Recent Plays -->
         <section class="relative flex flex-col gap-2 w-full h-full">
           <div style="display: flex; align-items: center;">
             <h2 id="recentplaystext" class="font-bold text-xl" style="margin-right: auto;">Jump Back In</h2>
-            <div id="polli">
+            <!-- <div id="polli">
               <button id="ClearRecentPlays" onclick="confirmClearRecentPlays()" class="link-danger">Clear Recent
                 Plays</button>
-            </div>
+            </div> -->
             <script>
 
             </script>
@@ -102,7 +150,7 @@
 
           <div class="relative overflow-hidden w-full rounded-lg">
             <!-- Buttons for prev/next controls -->
-            <!-- <button style="border-radius: 0;"
+            <button style="border-radius: 0;"
               class="prev-button hidden transition ease-linear absolute z-[1] left-0 w-20 h-full px-4 bg-gradient-to-r from-black to-transparent flex items-center justify-start">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"
                 class="w-6 h-6 relative">
@@ -117,7 +165,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75 6.75M19.5 12l-6.75-6.75">
                 </path>
               </svg>
-            </button> -->
+            </button>
 
             <!-- Recent Plays container -->
             <div
@@ -132,6 +180,20 @@
     <div id="spacerOfRecentPlays">
       <br><br><br>
     </div>
+
+
+    <center>
+      <div style="max-width: 80vw;">
+        <!-- Top of games page -->
+        <ins class="adsbygoogle" style="display:block; border: 1px solid red;border-radius: 5px;min-height: 100px ;"
+          data-ad-client="ca-pub-7128870281959256" data-ad-slot="5552399251" data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <br><br>
+    </center>
 
 
     <div class="text-center align-center justify-center d-flex flex-column">
@@ -151,6 +213,38 @@
       <br><br><br><br>
     </center>
   </main>
+
+
+  <center>
+    <div style="max-width: 80vw;">
+      <!-- Bottom of games page -->
+      <ins class="adsbygoogle" style="display:block;border: 1px solid red; border-radius: 5px;" data-ad-client="ca-pub-7128870281959256" data-ad-slot="5850500894"
+        data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+    <br><br>
+  </center>
+
+  <div class="container">
+    <footer id="footer" class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+          <img width="30" src="/app.png" alt="">
+        </a>
+        <span style="color: #fff;" class="mb-3 mb-md-0">Made with ❤️ by <a
+            href="https://github.com/hypackel">Hypackel</a> so please don't copy our code.</span>
+      </div>
+
+      <div style="color: #fff;" class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <a class="footerbuttons" target="_blank"
+          href="https://discord.gg/k74B3XETCa">Discord</a>&ThickSpace;/&ThickSpace;<a class="footerbuttons"
+          href="/library.html">Games</a>&ThickSpace;/&ThickSpace;<a class="footerbuttons"
+          href="https://github.com/hypackellite/hypackellite.github.io">Github</a>
+      </div>
+    </footer>
+  </div>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
