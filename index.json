@@ -1,5 +1,10 @@
 [
 	{
+		"url": "/files/highway-traffic/file/index.html",
+		"imageSrc": "/files/highway-traffic/splash.jpg",
+		"name": "Highway Traffic"
+	},
+	{
 		"url": "/files/pokemon-firered/index.html",
 		"imageSrc": "/files/pokemon-firered/splash.webp",
 		"name": "Pokemon - Fire Red"
