@@ -1,5 +1,10 @@
 [
 	{
+		"url": "/files/snowrider-3d/index.html",
+		"imageSrc": "/files/snowrider-3d/splash.jpg",
+		"name": "Snow Rider 3D"
+	},
+	{
 		"url": "/files/cluster-rush/index.html",
 		"imageSrc": "/files/cluster-rush/splash.png",
 		"name": "Cluster Rush",
